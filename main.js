@@ -39,10 +39,10 @@ $(document).ready(function () {
 
   var typed = new Typed(".typing", {
     strings: [
-      "Web Developer",
-      "JavaScript Developer",
-      "Python Developer",
-      "Freelancer",
+      "Web Developer.",
+      "JavaScript Developer.",
+      "Python Developer.",
+      "Freelancer.",
     ],
     typeSpeed: 100,
     backSpeed: 60,

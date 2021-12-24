@@ -351,7 +351,12 @@ a {
 
 .services .services-content p {
   text-align: justify;
-  line-height: 1.3;
+  line-height: 1.7;
+  margin: 20px 0 0px 0;
+}
+
+.services .services-content p span {
+  color: var(--mainColor);
 }
 
 /** End Services **/
@@ -724,9 +729,18 @@ a {
   .section1 .container {
     margin-left: 0;
   }
+
+  .projects .carousel .card .box .btns {
+    flex-direction: column;
+  }
+
+  .projects .carousel .card .box .btns a {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 1104px) {
+  
 }
 
 @media (max-width: 991px) {
@@ -746,12 +760,12 @@ a {
   .navbar .menu {
     position: fixed;
     background-color: var(--mainColor);
-    height: 100%;
+    height: 80vh;
     width: 100%;
     left: -100%;
     top: 0;
     text-align: center;
-    padding-top: 65px;
+    padding-top: 35px;
     transition: var(--transition);
   }
 
@@ -766,7 +780,7 @@ a {
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .section1 .section1-content .intro2 {
@@ -833,7 +847,7 @@ a {
     margin: auto;
   }
   .section1 .section1-content .intro2 {
-    font-size: 35px;
+    font-size: 33px;
   }
 
   .section1 .section1-content .intro3 {
