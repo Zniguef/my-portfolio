@@ -9,9 +9,11 @@
 }
 
 :root {
-  --mainColor: #2196f3;
-  --secondaryColor: ;
-  --hoverColor: ;
+  --mainColor: #000000;
+  --secondaryColor: #eeeeee;
+  --text-color: #7F8487;
+  --hoverColor: #FF0000;
+  --footer-color : #F8F8F8;
   --transition: 0.4s;
 }
 
@@ -82,7 +84,7 @@ a {
   height: 3px;
   bottom: 0;
   left: 50%;
-  background: var(--mainColor);
+  background: #D6C3BF;
   transform: translateX(-50%);
 }
 
@@ -94,7 +96,7 @@ a {
   left: 50%;
   background: #fff;
   transform: translateX(-50%);
-  color: var(--mainColor);
+  color: var(--text-color);
 }
 
 .about,
@@ -106,9 +108,7 @@ a {
 }
 
 .about .about-content,
-.services .services-content,
-.skills .skills-content,
-.contact .contact-content {
+.services .services-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -117,9 +117,9 @@ a {
 
 .scroll-up-btn {
   position: fixed;
-  height: 30px;
-  line-height: 30px;
-  width: 30px;
+  line-height: 36px;
+  width: 40px;
+  height: 35px;
   background-color: var(--mainColor);
   border-radius: 5px;
   text-align: center;
@@ -150,15 +150,10 @@ a {
 
 .navbar {
   position: fixed;
+  background-color: var(--mainColor);
   width: 100%;
-  padding: 25px 0;
   transition: all var(--transition);
   z-index: 999;
-}
-
-.navbar.sticky {
-  background-color: var(--mainColor);
-  padding: 20px 0;
 }
 
 .navbar .container {
@@ -167,24 +162,45 @@ a {
   justify-content: space-between;
 }
 
-.navbar .logo {
+.navbar .logo img {
+  height: 30px;
+  object-fit: cover;
 }
 
 .navbar .menu li {
   display: inline-block;
 }
 
-.navbar .menu li a {
-  display: block;
+.navbar .menu > li > a {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
   color: white;
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
   transition: var(--transition) ease;
+  overflow: hidden;
 }
 
-.navbar .menu li a:hover {
-  color: var(--mainColor);
+.navbar .menu > li > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hoverColor);
+}
+
+.navbar .menu > li > a:hover {
+  color: var(--hoverColor);
+}
+
+.navbar .menu > li > a:hover::before {
+  left: 0;
+  transition: var(--transition);
 }
 
 /* Start mobile menu */
@@ -202,12 +218,10 @@ a {
 
 .section1 {
   display: flex;
-  background-image: url("./images/bg.jpg");
+  background-image: url("../images/ff.png");
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
-  min-height: 600px;
-  color: #fff;
+  min-height: 700px;
 }
 
 .section1 .container {
@@ -215,11 +229,11 @@ a {
 }
 
 .section1 .section1-content .intro1 {
-  font-size: 27px;
+  font-size: 30px;
 }
 
 .section1 .section1-content .intro2 {
-  font-size: 55px;
+  font-size: 60px;
   font-weight: 500;
   margin-left: -3px;
 }
@@ -230,8 +244,9 @@ a {
 }
 
 .section1 .section1-content .intro3 span {
-  color: var(--mainColor);
-  font-weight: 500;
+  color: var(--hoverColor);
+  font-weight: bold;
+  font-size: 55px;
 }
 
 .section1 .section1-content a {
@@ -241,7 +256,6 @@ a {
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
-  border-radius: 5px;
   cursor: pointer;
   border: 2px solid var(--mainColor);
   transition: var(--transition);
@@ -249,6 +263,7 @@ a {
 
 .section1 .section1-content a:hover {
   background: none;
+  font-weight: bold;
   color: var(--mainColor);
 }
 
@@ -256,12 +271,24 @@ a {
 
 /** Start about **/
 
+.about {
+  position: relative;
+}
+
 .about .main-title::after {
-  content: "Who i am";
+  content: "Who i am ?";
 }
 
 .about .about-content .left {
   width: 41%;
+}
+
+.about .container img.circle {
+  position: absolute;
+  right: 70px;
+  top: 67px;
+  width: 80px;
+  height: 80px;
 }
 
 .about .about-content .left img {
@@ -275,6 +302,12 @@ a {
   width: 45%;
 }
 
+.about .container img.dots {
+  position: absolute;
+  top: 57px;
+  width: 150px;
+}
+
 .about .about-content .right .text {
   font-size: 25px;
   font-weight: 600;
@@ -283,12 +316,13 @@ a {
 }
 
 .about .about-content .right .text span {
-  color: var(--mainColor);
+  color: var(--hoverColor);
 }
 
 .about .about-content .right p {
   text-align: justify;
   line-height: 1.8;
+  color: var(--text-color);
 }
 
 .about .about-content .right a {
@@ -299,7 +333,6 @@ a {
   font-weight: 500;
   padding: 8px 30px;
   margin-top: 20px;
-  border-radius: 5px;
   cursor: pointer;
   border: 2px solid var(--mainColor);
   transition: var(--transition);
@@ -314,22 +347,22 @@ a {
 
 /** Start Services **/
 
-.services {
-  background-image: url("./images/zniguef-servicespng.png");
+.services .bg {
+  background-image: url("../images/zniguef-services.jpg");
+  background-color: red;
+  padding: 15px 0 80px 0;
 }
 
 .services .main-title::after {
-  content: "What i provide";
+  content: "What i provide ?";
 }
 
 .services .services-content .card {
   width: calc(33% - 20px);
-  background-color: white;
+  height: 305px;
   text-align: center;
-  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  color: white;
   transition: var(--transition);
-  border-radius: 5px;
-  cursor: pointer;
   padding: 20px 25px;
   margin-bottom: 10px;
 }
@@ -341,22 +374,24 @@ a {
 
 .services .services-content .card i {
   font-size: 40px;
-  color: var(--mainColor);
+  color: #fff
 }
 
 .services .services-content .text {
   margin: 25px 0 10px 0;
-  font-size: 22px;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .services .services-content p {
-  text-align: justify;
+  text-align: center;
   line-height: 1.7;
   margin: 20px 0 0px 0;
 }
 
 .services .services-content p span {
-  color: var(--mainColor);
+  color: #fff;
+  font-weight: bold;
 }
 
 /** End Services **/
@@ -364,98 +399,163 @@ a {
 /** Start Skills **/
 
 .skills .main-title::after {
-  content: "What i know";
+  content: "What i know ?";
 }
 
-.skills .skills-content .column {
-  width: calc(50% - 30px);
+.skills p {
+  text-align: center;
+  line-height: 1.6;
+  margin: 0 0 60px 0;
+  color: var(--text-color);
 }
 
-.skills .skills-content .left .text {
-  font-size: 25px;
-  font-weight: 600;
+.skills .skills-content .js-dev,
+.skills .skills-content .py-dev {
+  text-align: center;
+  margin: 0 0 21px 0;
+  font-size: 24px;
+  color: var(--mainColor);
+}
+
+.skills .skills-content .designe-skills,
+.skills .skills-content .up,
+.skills .skills-content .bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0 20px 0;
+}
+
+.skills .skills-content .designe-skills .designe1,
+.skills .skills-content .designe-skills .designe2,
+.skills .skills-content .up .skills-1,
+.skills .skills-content .up .skills-2,
+.skills .skills-content .bottom .skills-3,
+.skills .skills-content .bottom .skills-4  {
+  width: 30%;
+}
+
+.skills .skills-content .designe-skills .bars,
+.skills .skills-content .up .bars,
+.skills .skills-content .bottom .bars {
   margin-bottom: 15px;
 }
 
-.skills .skills-content .left p {
-  line-height: 1.5;
-  text-align: justify;
-}
-
-.skills .skills-content .right .bars {
-  margin-bottom: 15px;
-}
-
-.skills .skills-content .right .info {
+.skills .skills-content .designe-skills .info,
+.skills .skills-content .up .info,
+.skills .skills-content .bottom .info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.skills .skills-content .right span {
+.skills .skills-content .designe-skills span,
+.skills .skills-content .up span,
+.skills .skills-content .bottom span  {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-.skills .skills-content .right .line {
+.skills .skills-content .designe-skills .line,
+.skills .skills-content .up .line,
+.skills .skills-content .bottom .line {
   width: 100%;
-  height: 25px;
+  height: 18px;
   background-color: #eee;
   position: relative;
 }
 
-.skills .skills-content .right .line::before {
+.skills .skills-content .designe-skills .line::before,
+.skills .skills-content .up .line::before,
+.skills .skills-content .bottom .line::before {
   content: "";
   position: absolute;
   height: 100%;
   left: 0;
   top: 0;
-  background-color: var(--mainColor);
+  background-color: var(--text-color);
 }
 
-.skills-content .right .html::before {
+/** --------------------------- **/
+
+.skills-content .html::before {
   width: 75%;
 }
 
-.skills-content .right .css::before {
+.skills-content .css::before {
   width: 65%;
 }
 
-.skills-content .right .js::before {
+.skills-content .scss::before {
+  width: 55%;
+}
+
+.skills-content .bootstrap::before {
   width: 65%;
 }
 
-.skills-content .right .ts::before {
+/** --------------------------- **/
+
+
+.skills-content .up .js::before {
+  width: 75%;
+}
+
+.skills-content .up .ts::before {
   width: 45%;
 }
 
-.skills-content .right .react::before {
+.skills-content .up .react::before {
   width: 40%;
 }
 
-.skills-content .right .vue::before {
+.skills-content .up .vue::before {
   width: 60%;
 }
 
-.skills-content .right .node::before {
+.skills-content .up .node::before {
   width: 50%;
 }
 
-.skills-content .right .py::before {
+.skills-content .up .express::before {
+  width: 70%;
+}
+
+.skills-content .up .nest::before {
+  width: 70%;
+}
+
+/** --------------------------- **/
+
+.skills-content .bottom .py::before {
   width: 60%;
 }
+
+.skills-content .bottom .flask::before {
+  width: 55%;
+}
+
+.skills-content .bottom .fastapi::before {
+  width: 55%;
+}
+
+/** --------------------------- **/
 
 /** End Skills **/
 
 /** Start Projects **/
 
-.projects {
-  background-image: url();
+.projects .bg {
+  background-image: url("../images/zniguef-projects.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 0 10px 0;
 }
 
 .projects .main-title::after {
-  content: "What i make";
+  content: "What i make ?";
 }
 
 .projects .carousel .card {
@@ -472,7 +572,7 @@ a {
 
 .projects .carousel .card:hover {
   transform: scale(1.05);
-  background-color: var(--hoverColor);
+  background-color: var(--footer-color);
 }
 
 .projects .carousel .card .box {
@@ -494,13 +594,14 @@ a {
 }
 
 .projects .carousel .card .text {
-  font-size: 22px;
+  font-size: 25px;
   margin: 25px 0 0 0;
 }
 
 .projects .carousel .card p {
   padding: 20px 0;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 .projects .carousel .card p span {
@@ -520,10 +621,12 @@ a {
   padding: 10px 20px;
   border-radius: 5px;
   color: #fff;
+  border: 2px solid var(--mainColor);
 }
 
 .projects .carousel .card .box .btns a:hover {
-  background-color: var(--hoverColor);
+  background-color: #fff;
+  color: var(--mainColor);
 }
 
 .owl-dots {
@@ -536,20 +639,20 @@ a {
   width: 13px;
   outline: none !important;
   border-radius: 50%;
-  background-color: var(--mainColor) !important;
+  background-color: #fff !important;
   cursor: pointer;
   margin: 0 5px;
   transition: var(--transition);
 }
 
 .owl-dot.active {
-  background-color: var(--hoverColor) !important;
+  background-color: var(--text-color) !important;
   border-radius: 14px !important;
   width: 35px;
 }
 
 .owl-dot:hover {
-  background-color: var(--hoverColor) !important;
+  background-color: var(--text-color) !important;
 }
 
 .owl-nav {
@@ -559,13 +662,18 @@ a {
   top: 50%;
 }
 
+.owl-nav button span {
+  font-size: 25px !important;
+  font-weight: bold;
+}
+
 .owl-next,
 .owl-prev {
   position: relative;
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  background-color: var(--mainColor) !important;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  background-color: #fff!important;
   outline: none;
 }
 
@@ -585,14 +693,50 @@ a {
   content: "get in touche";
 }
 
-.contact .contact-content .column {
-  width: calc(50% - 30px);
+.contact .contact-content {
+  text-align: center;
+}
+
+.contact .up {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 40px 0;
+}
+
+.contact .up .name,
+.contact .up .email,
+.contact .up .address {
+  display: flex;
+  align-items: center;
+}
+
+.contact .up .name i,
+.contact .up .email i,
+.contact .up .address i {
+  display: block;
+  margin: 0 10px 0 0;
+font-size: 20px;
+}
+
+.contact .up .name p,
+.contact .up .email a,
+.contact .up .address p {
+  color: var(--text-color);
+}
+
+.contact .up .email a:hover {
+  color: var(--mainColor);
 }
 
 .contact .contact-content .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 15px;
+  color: var(--text-color);
 }
 
 .contact .contact-content .left .icons {
@@ -630,67 +774,74 @@ a {
   color: var(--hoverColor);
 }
 
-.contact .right form .fields {
+.contact form.contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact .field {
+  margin: 0 0 20px 0;
+}
+
+.contact .field.Name {
   display: flex;
-}
-
-.contact .right form .field,
-.contact .right form .fields .field {
-  height: 45px;
+  align-items: center;
   width: 100%;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  margin: 50px 0 20px 0;
 }
 
-.contact .right form .textarea {
-  height: 80px;
+.contact .field.Name .fName,
+.contact .field.Name .lName,
+.contact input.email,
+.contact input.subject {
+  display: flex;
+  height: 40px;
+}
+
+.contact input.email,
+.contact input.subject,
+.contact textarea.message {
   width: 100%;
+  padding: 6px;
 }
 
-.contact .right form .Name {
-  margin-right: 10px;
-}
-
-.contact .right form .Email {
-  margin-left: 10px;
-}
-
-.contact .right form .field input,
-.contact .right form .textarea textarea {
-  height: 100%;
-  width: 100%;
-  border: 1px solid lightgray;
-  border-radius: 5px;
+.contact form input {
+  border: transparent;
+  border-bottom: 1px solid var(--text-color);
   outline: none;
-  padding: 0 15px;
-  font-size: 17px;
 }
 
-.contact .right form .textarea textarea {
-  padding-top: 10px;
+.contact .textarea label {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  margin: 30px 0 20px 0;
+}
+
+.contact .textarea textarea {
   resize: none;
-  font-family: "Roboto", sans-serif;
+  outline: none;
+  font-family: "Roboto";
 }
 
-.contact .right form .button {
-  height: 47px;
-  width: 170px;
+.contact textarea.message {
+  height: 115px;
 }
 
-.contact .right form .button button {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  border: 2px solid var(--mainColor);
-  border-radius: 5px;
+.contact form button {
+  padding: 10px 20px;
   background-color: var(--mainColor);
-  font-size: 20px;
-  font-weight: 500;
-  color: #fff;
-  transition: var(--transition);
+  border: 2px solid var(--mainColor);
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
 }
 
-.contact .right form .button button:hover {
-  color: var(--hoverColor);
+.contact form button:hover {
+  background: none;
+  font-weight: bold;
+  color: var(--mainColor);
 }
 
 /** End Contact **/
@@ -698,12 +849,48 @@ a {
 /** Start Footer **/
 
 .footer {
-  background-color: var(--mainColor);
-  padding: 10px 23px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #fff;
+  background-color: var(--footer-color);
+  padding: 25px 0;
   text-align: center;
+}
+
+.footer .footer-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.footer .footer-logo img {
+  object-fit: cover;
+  width: 65px;
+}
+
+.footer .footer-menu {
+  margin: 30px 0;
+}
+
+.footer .footer-menu .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer-menu ul li a {
+  margin: 25px;
+  color: var(--mainColor);
+  font-size: 14px;
+}
+
+.footer .my-social a {
+  margin: 0 10px;
+  color: var(--mainColor);
+}
+
+.footer .my-social a:hover,
+.footer .footer-menu ul li a:hover {
+  color: var(--hoverColor);
 }
 
 /** End Footer **/
@@ -730,17 +917,17 @@ a {
     margin-left: 0;
   }
 
-  .projects .carousel .card .box .btns {
+  /* .projects .carousel .card .box .btns {
     flex-direction: column;
   }
 
   .projects .carousel .card .box .btns a {
     margin-bottom: 10px;
-  }
+  } */
 }
 
 @media (max-width: 1104px) {
-  
+
 }
 
 @media (max-width: 991px) {
