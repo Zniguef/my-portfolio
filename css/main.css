@@ -11,9 +11,9 @@
 :root {
   --mainColor: #000000;
   --secondaryColor: #eeeeee;
-  --text-color: #7F8487;
-  --hoverColor: #FF0000;
-  --footer-color : #F8F8F8;
+  --text-color: #7f8487;
+  --hoverColor: #ff0000;
+  --footer-color: #f8f8f8;
   --transition: 0.4s;
 }
 
@@ -84,7 +84,7 @@ a {
   height: 3px;
   bottom: 0;
   left: 50%;
-  background: #D6C3BF;
+  background: #d6c3bf;
   transform: translateX(-50%);
 }
 
@@ -152,6 +152,7 @@ a {
   position: fixed;
   background-color: var(--mainColor);
   width: 100%;
+  height: 50px;
   transition: all var(--transition);
   z-index: 999;
 }
@@ -160,6 +161,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
 }
 
 .navbar .logo img {
@@ -241,6 +243,7 @@ a {
 .section1 .section1-content .intro3 {
   font-size: 40px;
   margin: 5px 0;
+  height: 100px;
 }
 
 .section1 .section1-content .intro3 span {
@@ -255,7 +258,6 @@ a {
   color: #fff;
   font-size: 25px;
   padding: 12px 36px;
-  margin-top: 20px;
   cursor: pointer;
   border: 2px solid var(--mainColor);
   transition: var(--transition);
@@ -311,8 +313,8 @@ a {
 .about .about-content .right .text {
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 10px;
   line-height: 1.3;
+  height: 70px;
 }
 
 .about .about-content .right .text span {
@@ -349,6 +351,8 @@ a {
 
 .services .bg {
   background-image: url("../images/zniguef-services.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 15px 0 80px 0;
 }
 
@@ -373,7 +377,7 @@ a {
 
 .services .services-content .card i {
   font-size: 40px;
-  color: #fff
+  color: #fff;
 }
 
 .services .services-content .text {
@@ -431,7 +435,7 @@ a {
 .skills .skills-content .up .skills-1,
 .skills .skills-content .up .skills-2,
 .skills .skills-content .bottom .skills-3,
-.skills .skills-content .bottom .skills-4  {
+.skills .skills-content .bottom .skills-4 {
   width: 30%;
 }
 
@@ -451,7 +455,7 @@ a {
 
 .skills .skills-content .designe-skills span,
 .skills .skills-content .up span,
-.skills .skills-content .bottom span  {
+.skills .skills-content .bottom span {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -496,7 +500,6 @@ a {
 }
 
 /** --------------------------- **/
-
 
 .skills-content .up .js::before {
   width: 75%;
@@ -662,8 +665,9 @@ a {
 }
 
 .owl-nav button span {
-  font-size: 25px !important;
+  font-size: 30px !important;
   font-weight: bold;
+  line-height: 19px;
 }
 
 .owl-next,
@@ -672,7 +676,7 @@ a {
   height: 30px;
   width: 30px;
   border-radius: 5px;
-  background-color: #fff!important;
+  background-color: #fff !important;
   outline: none;
 }
 
@@ -718,7 +722,7 @@ a {
 .contact .up .address i {
   display: block;
   margin: 0 10px 0 0;
-font-size: 20px;
+  font-size: 20px;
 }
 
 .contact .up .name p,
@@ -809,6 +813,7 @@ font-size: 20px;
   border: transparent;
   border-bottom: 1px solid var(--text-color);
   outline: none;
+  font-size: 17px;
 }
 
 .contact .textarea label {
@@ -822,6 +827,7 @@ font-size: 20px;
   resize: none;
   outline: none;
   font-family: "Roboto";
+  font-size: 15px;
 }
 
 .contact textarea.message {
@@ -916,22 +922,26 @@ font-size: 20px;
     margin-left: 0;
   }
 
-  /* .projects .carousel .card .box .btns {
+  .projects .carousel .card .box .btns {
     flex-direction: column;
   }
 
   .projects .carousel .card .box .btns a {
     margin-bottom: 10px;
-  } */
+  }
 }
 
 @media (max-width: 1104px) {
-
 }
 
 @media (max-width: 991px) {
   .owl-nav {
-    display: none !important;
+    width: 75%;
+    top: auto;
+  }
+
+  .owl-prev {
+    left: 30px;
   }
 }
 
@@ -946,7 +956,8 @@ font-size: 20px;
   .navbar .menu {
     position: fixed;
     background-color: var(--mainColor);
-    height: 80vh;
+    opacity: 90%;
+    height: 77vh;
     width: 100%;
     left: -100%;
     top: 0;
@@ -965,7 +976,7 @@ font-size: 20px;
 
   .navbar .menu li a {
     display: inline-block;
-    margin: 20px 0;
+    margin: 12px 0;
     font-size: 22px;
   }
 
@@ -1020,13 +1031,8 @@ font-size: 20px;
 }
 
 @media (max-width: 690px) {
-
   .main-title {
     font-size: 32px;
-  }
-
-  .navbar.sticky {
-    padding: 10px 0;
   }
 
   .section1 .container {
@@ -1038,26 +1044,90 @@ font-size: 20px;
 
   .section1 .section1-content .intro3 {
     font-size: 25px;
+    width: 300px;
+  }
+
+  .section1 .section1-content .intro3 span {
+    font-size: 35px;
   }
 
   .section1 .section1-content a {
     font-size: 20px;
-    padding: 9px 25px;
+    padding: 9px 15px;
   }
 
   .about {
     padding: 40px 0 10px 0;
   }
 
+  .about .container img.circle,
+  .about .container img.dots {
+    display: none;
+  }
+
+  .about .about-content .right a {
+    padding: 8px 14px;
+  }
+
+  .skills .skills-content .designe-skills .designe1,
+  .skills .skills-content .designe-skills .designe2,
+  .skills .skills-content .up .skills-1,
+  .skills .skills-content .up .skills-2,
+  .skills .skills-content .bottom .skills-3,
+  .skills .skills-content .bottom .skills-4 {
+    width: 100%;
+  }
+
   .services {
     padding: 10px 0 0 0;
   }
 
-  .services .services-content .card {
-    width: 100%;
+  .services .bg {
+    background-image: none;
+    padding: 15px 0 0 0;
   }
 
-  .contact .right form .fields {
+  .services .services-content {
+    flex-direction: column;
+  }
+
+  .services .services-content .card {
+    width: 100%;
+    height: auto;
+    background-color: var(--text-color);
+    opacity: 75%;
+    border-radius: 4px;
+  }
+
+  .projects .carousel .card {
+    padding: 0;
+  }
+
+  .owl-dots {
+    margin-top: 0 !important;
+    margin-bottom: 5px;
+  }
+
+  .contact,
+  .projects {
+    padding: 20px 0;
+  }
+
+  .contact .up {
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contact .up .name,
+  .contact .up .email,
+  .contact .up .address {
+    margin: 8px 0;
+  }
+
+  .contact .field.Name {
     flex-direction: column;
   }
 
@@ -1065,13 +1135,30 @@ font-size: 20px;
     font-size: 22px;
   }
 
+  .contact form.contact-form {
+    width: 95%;
+  }
+
   .contact .right form .button {
     height: 40px;
   }
 
-  .contact .right form .Email,
-  .contact .right form .Name {
-    margin: 0;
+  .contact .field.Name .fName {
+    margin: 0 0 15px 0;
+  }
+
+  .contact .field.Name .fName,
+  .contact .field.Name .lName,
+  .contact form input {
+    width: 100%;
+  }
+
+  .footer .footer-menu ul li a {
+    margin: 0 13px 0 0;
+  }
+
+  .scroll-up-btn.show {
+    bottom: 105px;
   }
 
   .scroll-up-btn {
