@@ -305,6 +305,26 @@
           <div class="carousel owl-carousel">
             <div class="card">
               <div class="box">
+                <img src="images/netflix-clone.png" alt="netflix-clone" />
+                <div class="text">Clone Netflix</div>
+                <p>
+                  In this project i use: <br />
+                  <span>Reactjs, Firebase, Css, TMDB Api</span>
+                </p>
+                <div class="btns">
+                  <a href="https://netflix-clone-f4aff.web.app" target="_blank"
+                    >Show Online</a
+                  >
+                  <a
+                    href="https://github.com/Zniguef/netflix-clone-reactjs"
+                    target="_blank"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="box">
                 <img src="images/restaurant.png" alt="restaurant template" />
                 <div class="text">Restaurant Template</div>
                 <p>
@@ -329,7 +349,7 @@
                   src="images/animation-template.png"
                   alt="template with animation"
                 />
-                <div class="text">Task tracker</div>
+                <div class="text">Template with animation</div>
                 <p>
                   In this project i use: <br />
                   <span>Html, Css</span>
@@ -368,14 +388,29 @@
             </div>
             <div class="card">
               <div class="box">
-                <img
-                  src="images/react-shopping-cart.png"
-                  alt="React shopping cart"
-                />
+                <img src="images" alt="Checkout designe" />
+                <div class="text">Checkout</div>
+                <p>
+                  In this project i use: <br />
+                  <span>Html, Css, JavaScript</span>
+                </p>
+                <div class="btns">
+                  <a href="https://zniguef.github.io/Checkout" target="_blank"
+                    >Show Online</a
+                  >
+                  <a href="https://github.com/Zniguef/Checkout" target="_blank"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="box">
+                <img src="images/shopping-cart.png" alt="React shopping cart" />
                 <div class="text">Shopping cart</div>
                 <p>
                   In this project i use: <br />
-                  <span>Reactjs, Html, Css</span>
+                  <span>Reactjs, Css</span>
                 </p>
                 <div class="btns">
                   <a
@@ -422,10 +457,10 @@
                 <div class="text">task tracker</div>
                 <p>
                   In this project i use: <br />
-                  <span>Reactjs, Html, Css</span>
+                  <span>Reactjs, Css, JSON-Server</span>
                 </p>
                 <div class="btns">
-                  <a href="#" target="_blank">Show Online</a>
+                  <a class="tracker"><span>Show Online</span></a>
                   <a
                     href="https://github.com/Zniguef/task-tracker"
                     target="_blank"
@@ -450,7 +485,7 @@
           <div class="column up">
             <div class="name">
               <i class="fas fa-phone-volume"></i>
-              <p>+212 611 678 243</p>
+              <a href="tel:+212 611 678 243">+212 611 678 243</a>
             </div>
             <div class="email">
               <i class="fas fa-envelope"></i>
@@ -465,11 +500,16 @@
           </div>
           <div class="column bottom">
             <div class="text">Message me</div>
-            <form method="POST" class="contact-form">
+            <form
+              action="https://formsubmit.co/f7bc8e0ab58b5115c70a65129ce5439d"
+              method="POST"
+              class="contact-form"
+            >
               <div class="fields">
                 <div class="field Name">
                   <div class="fName">
                     <input
+                      name="name"
                       class="name"
                       type="text"
                       placeholder="First Name..."
@@ -478,6 +518,7 @@
                   </div>
                   <div class="lName">
                     <input
+                      name="name"
                       class="name"
                       type="text"
                       placeholder="Last Name..."
@@ -490,6 +531,7 @@
                 <input
                   class="email"
                   type="email"
+                  name="email"
                   placeholder="example@gmail.com"
                   required
                 />
@@ -497,6 +539,7 @@
               <div class="field">
                 <input
                   class="subject"
+                  name="_subject"
                   type="text"
                   placeholder="Subject..."
                   required
@@ -506,6 +549,7 @@
                 <label for="">Message</label>
                 <textarea
                   class="message"
+                  name="message"
                   cols="30"
                   rows="10"
                   placeholder="Describe project..."
@@ -562,7 +606,7 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script
       type="module"
-      src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"
+      src="https://www.gstatic.com/firebasejs/9.6.1/firebase.js"
     ></script>
     <script src="js/main.js"></script>
     <script src="js/form.js"></script>

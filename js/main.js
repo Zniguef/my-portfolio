@@ -53,7 +53,7 @@ $(document).ready(function () {
   $(".carousel").owlCarousel({
     margin: 20,
     loop: true,
-    autoPlayTimeOut: 2000,
+    autoplay: true,
     autoPlayHoverPause: true,
     responsive: {
       0: {
@@ -68,5 +68,12 @@ $(document).ready(function () {
         items: 1,
       },
     },
+  });
+
+  $(".owl-carousel .owl-item").on("mouseenter", function (e) {
+    $(this).closest(".owl-carousel").trigger("stop.owl.autoplay");
+  });
+  $(".owl-carousel .owl-item").on("mouseleave", function (e) {
+    $(this).closest(".owl-carousel").trigger("play.owl.autoplay", [3000]);
   });
 });

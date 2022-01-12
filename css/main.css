@@ -220,7 +220,7 @@ a {
 
 .section1 {
   display: flex;
-  background-image: url("../images/ff.png");
+  background-image: url("../images/header.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   min-height: 700px;
@@ -353,7 +353,7 @@ a {
   background-image: url("../images/zniguef-services.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 15px 0 80px 0;
+  padding: 15px 0 113px 0;
 }
 
 .services .main-title::after {
@@ -368,6 +368,13 @@ a {
   transition: var(--transition);
   padding: 20px 25px;
   margin-bottom: 10px;
+}
+
+.services .services-content .card .box {
+  background-color: #b9afaf59;
+  opacity: 0.9;
+  border-radius: 3px;
+  padding: 15px 10px;
 }
 
 .services .services-content .card:hover {
@@ -631,6 +638,20 @@ a {
   color: var(--mainColor);
 }
 
+.projects .container .card .box .btns a.tracker:hover span {
+  display: none;
+}
+
+.projects .container .card .box .btns a.tracker:hover::before {
+  content: "Not availabale !";
+}
+
+.projects .container .card .box .btns a.tracker:hover {
+  background-color: var(--hoverColor) !important;
+  color: #fff !important;
+  border: 2px solid var(--hoverColor) !important;
+}
+
 .owl-dots {
   text-align: center;
   margin-top: 20px;
@@ -725,13 +746,14 @@ a {
   font-size: 20px;
 }
 
-.contact .up .name p,
+.contact .up .name a,
 .contact .up .email a,
 .contact .up .address p {
   color: var(--text-color);
 }
 
-.contact .up .email a:hover {
+.contact .up .email a:hover,
+.contact .up .name a:hover {
   color: var(--mainColor);
 }
 
@@ -931,17 +953,40 @@ a {
   }
 }
 
-@media (max-width: 1104px) {
+@media (min-width: 992px) and (max-width: 1120px) {
+  .services .services-content .card {
+    height: auto;
+  }
+
+  .projects .carousel .card p {
+    height: 125px;
+  }
 }
 
-@media (max-width: 991px) {
+@media (min-width: 691px) and (max-width: 991px) {
+  .services .services-content .card {
+    height: auto;
+  }
+
   .owl-nav {
     width: 75%;
     top: auto;
   }
 
   .owl-prev {
-    left: 30px;
+    left: 123px;
+  }
+
+  .projects .carousel .card .text {
+    height: 60px;
+  }
+
+  .projects .carousel .card p {
+    height: 150px;
+  }
+
+  .contact form.contact-form {
+    width: 95%;
   }
 }
 
@@ -1099,6 +1144,10 @@ a {
     border-radius: 4px;
   }
 
+  .services .services-content .card .box {
+    background: none;
+  }
+
   .projects .carousel .card {
     padding: 0;
   }
@@ -1163,6 +1212,15 @@ a {
 
   .scroll-up-btn {
     right: 5px;
+  }
+
+  .owl-nav {
+    width: 75%;
+    top: auto;
+  }
+
+  .owl-prev {
+    left: 20px;
   }
 }
 
