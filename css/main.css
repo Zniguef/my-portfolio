@@ -220,7 +220,7 @@ a {
 
 .section1 {
   display: flex;
-  background-image: url("../images/header.jpeg");
+  background-image: url("../images");
   background-repeat: no-repeat;
   background-position: center;
   min-height: 700px;
@@ -937,6 +937,76 @@ a {
 
 /** End animation **/
 
+/** start tahnk u page**/
+
+.th-navbar {
+  background: black;
+  text-align: center;
+  height: 80px;
+}
+
+.th-navbar img {
+  height: 60px;
+  margin: 10px auto;
+}
+
+.thank-content {
+  text-align: center;
+  width: 65%;
+  margin: 80px auto;
+  border-radius: 5px;
+  padding: 25px 20px;
+}
+
+.thank-content h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.thank-content > p {
+  font-size: 30px;
+  margin: 0 0 20px;
+}
+
+.thank-content .text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: center;
+  margin: 0 0 45px 0;
+}
+
+.thank-content i {
+  font-size: 25px;
+  margin: 0 10px 0 0;
+}
+
+.thank-content p {
+  font-size: 19px;
+  line-height: 27px;
+}
+
+.thank-content .btn {
+  text-decoration: none;
+  border: 2px solid black;
+  width: 115px;
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 7px;
+  color: var(--mainColor);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.thank-content .btn:hover {
+  background-color: var(--mainColor);
+  color: #fff;
+}
+
+/** End tahnk u page**/
+
 /** Start Media Query **/
 
 @media (max-width: 1300px) {
@@ -1221,6 +1291,14 @@ a {
 
   .owl-prev {
     left: 20px;
+  }
+
+  .thank-content {
+    width: 100%;
+  }
+
+  .thank-content .text {
+    flex-direction: column;
   }
 }
 
