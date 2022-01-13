@@ -350,7 +350,7 @@ a {
 /** Start Services **/
 
 .services .bg {
-  background-image: url("../images/zniguef-services.jpg");
+  /* background-image: url("../images/zniguef-services.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   padding: 15px 0 113px 0;
@@ -371,8 +371,8 @@ a {
 }
 
 .services .services-content .card .box {
-  background-color: #b9afaf59;
-  opacity: 0.9;
+  background-color: var(--mainColor);
+  opacity: 60%;
   border-radius: 3px;
   padding: 15px 10px;
 }
@@ -1139,8 +1139,8 @@ a {
   .services .services-content .card {
     width: 100%;
     height: auto;
-    background-color: var(--text-color);
-    opacity: 75%;
+    background-color: var(--mainColor);
+    opacity: 60%;
     border-radius: 4px;
   }
 
