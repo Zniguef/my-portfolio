@@ -220,7 +220,7 @@ a {
 
 .section1 {
   display: flex;
-  background-image: url("../images");
+  background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   min-height: 700px;
@@ -232,18 +232,21 @@ a {
 
 .section1 .section1-content .intro1 {
   font-size: 30px;
+  color: #fff;
 }
 
 .section1 .section1-content .intro2 {
   font-size: 60px;
   font-weight: 500;
   margin-left: -3px;
+  color: #fff;
 }
 
 .section1 .section1-content .intro3 {
   font-size: 40px;
   margin: 5px 0;
   height: 100px;
+  color: #fff;
 }
 
 .section1 .section1-content .intro3 span {
@@ -1149,6 +1152,10 @@ a {
 @media (max-width: 690px) {
   .main-title {
     font-size: 32px;
+  }
+
+  .section1 {
+    background-image: url("../images/header-mobile.jpg");
   }
 
   .section1 .container {
