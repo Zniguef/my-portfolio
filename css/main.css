@@ -260,16 +260,17 @@ a {
   background-color: var(--mainColor);
   color: #fff;
   font-size: 25px;
-  padding: 12px 36px;
+  padding: 10px 30px;
   cursor: pointer;
   border: 2px solid var(--mainColor);
   transition: var(--transition);
 }
 
 .section1 .section1-content a:hover {
-  background: none;
+  background-color: #fff;
   font-weight: bold;
   color: var(--mainColor);
+  border: 2px solid #fff;
 }
 
 /** End Section1 **/
