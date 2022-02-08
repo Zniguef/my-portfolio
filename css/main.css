@@ -267,9 +267,8 @@ a {
 }
 
 .section1 .section1-content a:hover {
-  background: none;
+  background: var(--mainColor);
   color: #fff;
-  border: 2px solid #fff;
 }
 
 /** End Section1 **/
