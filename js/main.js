@@ -42,7 +42,7 @@ $(document).ready(function () {
       "Web Developer.",
       "JavaScript Developer.",
       "Python Developer.",
-      "Freelancer.",
+      // "Freelancer.",
     ],
     typeSpeed: 100,
     backSpeed: 60,
