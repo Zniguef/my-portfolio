@@ -29,7 +29,6 @@ $(document).ready(function () {
     strings: [
       "Web Developer.",
       "JavaScript Developer.",
-      "Python Developer.",
       "Freelancer.",
     ],
     typeSpeed: 100,
@@ -41,8 +40,7 @@ $(document).ready(function () {
     strings: [
       "Web Developer.",
       "JavaScript Developer.",
-      "Python Developer.",
-      // "Freelancer.",
+      "Freelancer.",
     ],
     typeSpeed: 100,
     backSpeed: 60,
