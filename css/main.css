@@ -9,7 +9,7 @@
 }
 
 :root {
-  --mainColor: #000000;
+  --mainColor: #444;
   --secondaryColor: #eeeeee;
   --text-color: #7f8487;
   --hoverColor: #ff0000;
@@ -26,10 +26,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -38,6 +34,21 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .container {
@@ -75,6 +86,18 @@ a {
   font-weight: 500;
   margin-bottom: 60px;
   padding-bottom: 20px;
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .main-title::before {
@@ -84,7 +107,7 @@ a {
   height: 3px;
   bottom: 0;
   left: 50%;
-  background: #d6c3bf;
+  background: var(--mainColor);
   transform: translateX(-50%);
 }
 
@@ -96,7 +119,7 @@ a {
   left: 50%;
   background: #fff;
   transform: translateX(-50%);
-  color: var(--text-color);
+  color: var(--mainColor);
 }
 
 .about,
@@ -120,12 +143,12 @@ a {
   line-height: 36px;
   width: 40px;
   height: 35px;
-  background-color: var(--mainColor);
   border-radius: 5px;
   text-align: center;
   right: 30px;
   bottom: 10px;
-  color: #fff;
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
   cursor: pointer;
   font-size: 20px;
   z-index: 999;
@@ -135,13 +158,24 @@ a {
 }
 
 .scroll-up-btn.show {
-  bottom: 60px;
+  bottom: 220px;
   opacity: 1;
   pointer-events: auto;
 }
 
 .scroll-up-btn:hover {
-  color: var(--hoverColor);
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /** End Global Roles**/
@@ -149,8 +183,6 @@ a {
 /** Start banner **/
 
 .navbar {
-  position: fixed;
-  background-color: var(--mainColor);
   width: 100%;
   height: 50px;
   transition: all var(--transition);
@@ -161,11 +193,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 95px;
 }
 
 .navbar .logo img {
-  height: 30px;
+  height: 45px;
   object-fit: cover;
 }
 
@@ -178,7 +210,7 @@ a {
   align-items: center;
   height: 50px;
   position: relative;
-  color: white;
+  color: var(--mainColor);
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
@@ -193,11 +225,30 @@ a {
   left: -100%;
   width: 100%;
   height: 4px;
-  background-color: var(--hoverColor);
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
 }
 
 .navbar .menu > li > a:hover {
-  color: var(--hoverColor);
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .navbar .menu > li > a:hover::before {
@@ -220,55 +271,95 @@ a {
 
 .section1 {
   display: flex;
-  background-image: url("../images/header.jpg");
+  background-image: url("../images/bg-sc1.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
   min-height: 700px;
 }
 
 .section1 .container {
-  margin: auto;
+  text-align: center;
 }
 
 .section1 .section1-content .intro1 {
   font-size: 30px;
-  color: #fff;
+  color: var(--mainColor);
+}
+
+.section1 .container .section1-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  right: 0;
+  margin-top: -165px;
+  left: 0;
 }
 
 .section1 .section1-content .intro2 {
   font-size: 60px;
   font-weight: 500;
   margin-left: -3px;
-  color: #fff;
+  color: var(--mainColor);
+  margin: 20px 0 0 0;
 }
 
 .section1 .section1-content .intro3 {
   font-size: 40px;
   margin: 5px 0;
   height: 100px;
-  color: #fff;
+  margin: 25px 0 60px 0;
+  color: var(--mainColor);
 }
 
 .section1 .section1-content .intro3 span {
-  color: var(--hoverColor);
   font-weight: bold;
-  font-size: 55px;
+  font-size: 80px;
 }
 
 .section1 .section1-content a {
   display: inline-block;
-  background-color: #fff;
-  color: var(--mainColor);
+  margin: 25px 33px 0 20px;
   font-size: 20px;
-  padding: 10px 24px;
   cursor: pointer;
   transition: var(--transition);
-  border-radius: 7px;
 }
 
-.section1 .section1-content a:hover {
-  background: var(--mainColor);
+.section1 .section1-content a.work {
+  position: relative;
+  background-color: var(--mainColor);
   color: #fff;
+  padding: 23px 44px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.section1 .section1-content a.work i {
+  position: absolute;
+  margin: 3px 0 0 7px;
+  left: 0;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.section1 .section1-content a.work:hover {
+  background: none;
+  border: 2px solid var(--mainColor);
+  color: var(--mainColor);
+}
+
+.section1 .section1-content a.work:hover i {
+  opacity: 1;
+  right: -190px;
+}
+
+.section1 .section1-content a.contact {
+  color: var(--mainColor);
+  font-weight: 500;
+  text-decoration-line: revert;
+}
+
+.section1 .section1-content a.contact i {
+  margin: 0 6px 0 0;
 }
 
 /** End Section1 **/
@@ -317,35 +408,31 @@ a {
   font-weight: 600;
   line-height: 1.3;
   height: 70px;
-}
-
-.about .about-content .right .text span {
-  color: var(--hoverColor);
+  color: var(--mainColor);
 }
 
 .about .about-content .right p {
   text-align: justify;
   line-height: 1.8;
-  color: var(--text-color);
+  color: var(--mainColor);
 }
 
 .about .about-content .right a {
   display: inline-block;
-  background-color: var(--mainColor);
-  color: #fff;
+  color: var(--mainColor);
   font-size: 17px;
   font-weight: 500;
-  padding: 8px 15px;
+  padding: 16px 40px;
   margin-top: 40px;
   cursor: pointer;
   border: 2px solid var(--mainColor);
   transition: var(--transition);
-  border-radius: 7px;
+  border-radius: 50px;
 }
 
 .about .about-content .right a:hover {
-  color: var(--mainColor);
-  background: none;
+  color: #fff;
+  background-color: var(--mainColor);
 }
 
 /** End about **/
@@ -353,7 +440,6 @@ a {
 /** Start Services **/
 
 .services .bg {
-  /* background-image: url("../images/zniguef-services.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   padding: 15px 0 113px 0;
@@ -367,17 +453,18 @@ a {
   width: calc(33% - 20px);
   height: 305px;
   text-align: center;
-  color: white;
+  color: var(--mainColor);
   transition: var(--transition);
   padding: 20px 25px;
   margin-bottom: 10px;
 }
 
 .services .services-content .card .box {
-  background-color: var(--mainColor);
+  background-color: #fff;
   opacity: 60%;
   border-radius: 3px;
   padding: 15px 10px;
+  box-shadow: 0px 0px 5px 0px #22222275;
 }
 
 .services .services-content .card:hover {
@@ -387,13 +474,25 @@ a {
 
 .services .services-content .card i {
   font-size: 40px;
-  color: #fff;
+  color: #ef813c;
 }
 
 .services .services-content .text {
   margin: 25px 0 10px 0;
   font-size: 26px;
   font-weight: bold;
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .services .services-content p {
@@ -403,7 +502,6 @@ a {
 }
 
 .services .services-content p span {
-  color: #fff;
   font-weight: bold;
 }
 
@@ -419,7 +517,22 @@ a {
   text-align: center;
   line-height: 1.6;
   margin: 0 0 60px 0;
-  color: var(--text-color);
+  color: var(--mainColor);
+}
+
+.skills p span {
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .skills .skills-content .js-dev,
@@ -469,6 +582,7 @@ a {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
+  color: var(--mainColor);
 }
 
 .skills .skills-content .designe-skills .line,
@@ -476,7 +590,7 @@ a {
 .skills .skills-content .bottom .line {
   width: 100%;
   height: 18px;
-  background-color: #eee;
+  background-color: rgb(238 238 238 / 65%);
   position: relative;
 }
 
@@ -488,7 +602,16 @@ a {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: var(--text-color);
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  color: transparent;
 }
 
 /** --------------------------- **/
@@ -560,7 +683,6 @@ a {
 /** Start Projects **/
 
 .projects .bg {
-  background-image: url("../images/zniguef-projects.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 0 10px 0;
@@ -613,7 +735,7 @@ a {
 .projects .carousel .card p {
   padding: 20px 0;
   line-height: 1.5;
-  color: var(--text-color);
+  color: var(--mainColor);
 }
 
 .projects .carousel .card p span {
@@ -629,16 +751,16 @@ a {
 }
 
 .projects .carousel .card .box .btns a {
-  background-color: var(--mainColor);
+  background: none;
   padding: 10px 20px;
-  border-radius: 5px;
-  color: #fff;
+  border-radius: 50px;
+  color: var(--mainColor);
   border: 2px solid var(--mainColor);
 }
 
 .projects .carousel .card .box .btns a:hover {
-  background-color: #fff;
-  color: var(--mainColor);
+  background-color: var(--mainColor);
+  color: #fff;
 }
 
 .projects .container .card .box .btns a.tracker:hover span,
@@ -671,14 +793,14 @@ a {
   width: 13px;
   outline: none !important;
   border-radius: 50%;
-  background-color: #fff !important;
+  background-color: var(--mainColor) !important;
   cursor: pointer;
   margin: 0 5px;
   transition: var(--transition);
 }
 
 .owl-dot.active {
-  background-color: var(--text-color) !important;
+  background-color: var(--mainColor) !important;
   border-radius: 14px !important;
   width: 35px;
 }
@@ -703,6 +825,7 @@ a {
 .owl-next,
 .owl-prev {
   position: relative;
+  border: 1px solid var(--mainColor) !important;
   height: 30px;
   width: 30px;
   border-radius: 5px;
@@ -724,10 +847,6 @@ a {
 
 .contact .main-title::after {
   content: "get in touche";
-}
-
-.contact .contact-content {
-  text-align: center;
 }
 
 .contact .up {
@@ -753,24 +872,47 @@ a {
   display: block;
   margin: 0 10px 0 0;
   font-size: 20px;
+  color: #f29f3a;
 }
 
 .contact .up .name a,
 .contact .up .email a,
 .contact .up .address p {
-  color: var(--text-color);
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .contact .up .email a:hover,
 .contact .up .name a:hover {
-  color: var(--mainColor);
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .contact .contact-content .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 15px;
-  color: var(--text-color);
+  color: var(--mainColor);
 }
 
 .contact .contact-content .left .icons {
@@ -810,11 +952,25 @@ a {
 
 .contact form.contact-form {
   width: 50%;
-  margin: 0 auto;
 }
 
 .contact .field {
   margin: 0 0 20px 0;
+}
+
+.contact .formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact .formContainer img {
+  position: relative;
+  object-fit: cover;
+  width: 45%;
+  margin-left: 56px;
+  animation: 3s linear 0s infinite normal none running up-down;
 }
 
 .contact .field.Name {
@@ -867,19 +1023,19 @@ a {
 }
 
 .contact form button {
-  padding: 10px 20px;
-  background-color: var(--mainColor);
+  padding: 10px 45px;
+  background: none;
   border: 2px solid var(--mainColor);
-  color: white;
+  color: var(--mainColor);
   cursor: pointer;
   font-size: 18px;
-  border-radius: 7px;
+  border-radius: 50px;
 }
 
 .contact form button:hover {
-  background: none;
+  background-color: var(--mainColor);
   font-weight: bold;
-  color: var(--mainColor);
+  color: #fff;
 }
 
 /** End Contact **/
@@ -887,7 +1043,15 @@ a {
 /** Start Footer **/
 
 .footer {
-  background-color: var(--footer-color);
+  background: #f29f3a;
+  background: linear-gradient(
+    124deg,
+    #f29f3a,
+    #ef813c,
+    #f0466b,
+    #d422ca,
+    #fc22ac
+  );
   padding: 25px 0;
   text-align: center;
 }
@@ -901,8 +1065,8 @@ a {
 }
 
 .footer .footer-logo img {
-  object-fit: cover;
-  width: 65px;
+  object-fit: contain;
+  width: 100px;
 }
 
 .footer .footer-menu {
@@ -917,18 +1081,19 @@ a {
 
 .footer .footer-menu ul li a {
   margin: 25px;
-  color: var(--mainColor);
+  color: #fff;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .footer .my-social a {
   margin: 0 10px;
-  color: var(--mainColor);
+  color: #fff;
 }
 
 .footer .my-social a:hover,
 .footer .footer-menu ul li a:hover {
-  color: var(--hoverColor);
+  color: #f4ae3e;
 }
 
 /** End Footer **/
