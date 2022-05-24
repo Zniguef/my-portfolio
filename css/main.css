@@ -84,7 +84,7 @@ a {
   text-align: center;
   font-size: 40px;
   font-weight: 500;
-  margin-bottom: 60px;
+  margin-bottom: 25px;
   padding-bottom: 20px;
   background-image: linear-gradient(
     110.78deg,
@@ -128,6 +128,10 @@ a {
 .projects,
 .contact {
   padding: 60px 0;
+}
+
+.about .about-content {
+  margin-top: 75px;
 }
 
 .about .about-content,
@@ -258,7 +262,7 @@ a {
 
 /* Start mobile menu */
 .navbar .menu-btn {
-  color: #fff;
+  color: var(--mainColor);
   font-size: 23px;
   cursor: pointer;
   display: none;
@@ -366,7 +370,8 @@ a {
 
 /** Start about **/
 
-.about {
+.about,
+.skills {
   position: relative;
 }
 
@@ -460,8 +465,8 @@ a {
 }
 
 .services .services-content .card .box {
+  height: 405px;
   background-color: #fff;
-  opacity: 60%;
   border-radius: 3px;
   padding: 15px 10px;
   box-shadow: 0px 0px 5px 0px #22222275;
@@ -499,6 +504,7 @@ a {
   text-align: center;
   line-height: 1.7;
   margin: 20px 0 0px 0;
+  color: black;
 }
 
 .services .services-content p span {
@@ -511,6 +517,20 @@ a {
 
 .skills .main-title::after {
   content: "What i know ?";
+}
+
+.skills .container img.circle {
+  position: absolute;
+  top: 10px;
+  width: 84px;
+  left: 120px;
+}
+
+.skills .container img.dots {
+  position: absolute;
+  right: 125px;
+  top: 62px;
+  width: 160px;
 }
 
 .skills p {
@@ -754,13 +774,29 @@ a {
   background: none;
   padding: 10px 20px;
   border-radius: 50px;
-  color: var(--mainColor);
-  border: 2px solid var(--mainColor);
+  color: #fff;
+  /* border: 2px solid var(--mainColor); */
+  /* border-width: 2px; */
+  /* border-style: solid; */
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* color: transparent; */
 }
 
 .projects .carousel .card .box .btns a:hover {
-  background-color: var(--mainColor);
-  color: #fff;
+  background-color: #fff;
+  background-image: none !important;
+  color: var(--mainColor);
+  border: 2px solid var(--mainColor);
 }
 
 .projects .container .card .box .btns a.tracker:hover span,
@@ -793,7 +829,16 @@ a {
   width: 13px;
   outline: none !important;
   border-radius: 50%;
-  background-color: var(--mainColor) !important;
+  background-image: linear-gradient(
+    110.78deg,
+    rgb(118, 230, 80) -1.13%,
+    rgb(249, 214, 73) 15.22%,
+    rgb(240, 142, 53) 32.09%,
+    rgb(236, 81, 87) 48.96%,
+    rgb(255, 24, 189) 67.94%,
+    rgb(26, 75, 255) 85.34%
+  ) !important;
+  /* background-color: var(--mainColor) !important; */
   cursor: pointer;
   margin: 0 5px;
   transition: var(--transition);
@@ -1113,7 +1158,7 @@ a {
 
 /** End animation **/
 
-/** start tahnk u page**/
+/** start tahnk you page**/
 
 .th-navbar {
   background: black;
@@ -1207,11 +1252,31 @@ a {
   .projects .carousel .card p {
     height: 125px;
   }
+
+  .contact .container .column.bottom {
+    text-align: center;
+  }
+
+  .contact .formContainer img {
+    display: none;
+  }
 }
 
 @media (min-width: 691px) and (max-width: 991px) {
+  .section1 .container .section1-content {
+    margin-top: -360px;
+  }
   .services .services-content .card {
     height: auto;
+  }
+
+  .contact .formContainer img {
+    display: none;
+  }
+
+  .skills .container img.circle,
+  .skills .container img.dots {
+    display: none;
   }
 
   .owl-nav {
@@ -1241,19 +1306,23 @@ a {
     display: block;
     z-index: 99;
   }
+
   .navbar .menu-btn i.active::before {
     content: "\f00d";
+    color: #fff;
+    z-index: 2;
   }
+
   .navbar .menu {
     position: fixed;
-    background-color: var(--mainColor);
+    background-color: #444444fc;
     opacity: 90%;
-    height: 77vh;
     width: 100%;
+    z-index: 1;
     left: -100%;
     top: 0;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 45px;
     transition: var(--transition);
   }
 
@@ -1271,12 +1340,17 @@ a {
     font-size: 19px;
   }
 
+  .navbar .menu > li > a {
+    color: #fff;
+  }
+
   .section1 .section1-content .intro2 {
     font-size: 45px;
   }
 
   .section1 .section1-content .intro3 {
     font-size: 35px;
+    margin-bottom: 150px;
   }
 
   .section1 .section1-content a {
@@ -1322,6 +1396,10 @@ a {
 }
 
 @media (max-width: 690px) {
+  .navbar .logo img {
+    height: 35px;
+  }
+
   .main-title {
     font-size: 32px;
   }
@@ -1339,7 +1417,7 @@ a {
 
   .section1 .section1-content .intro3 {
     font-size: 25px;
-    width: 300px;
+    width: 100%;
   }
 
   .section1 .section1-content .intro3 span {
@@ -1362,6 +1440,11 @@ a {
 
   .about .about-content .right a {
     padding: 8px 14px;
+  }
+
+  .skills .container img.dots,
+  .skills .container img.circle {
+    display: none;
   }
 
   .skills .skills-content .designe-skills .designe1,
@@ -1389,8 +1472,6 @@ a {
   .services .services-content .card {
     width: 100%;
     height: auto;
-    background-color: var(--mainColor);
-    opacity: 60%;
     border-radius: 4px;
   }
 
@@ -1410,6 +1491,10 @@ a {
   .contact,
   .projects {
     padding: 20px 0;
+  }
+
+  .contact .formContainer img {
+    display: none;
   }
 
   .contact .up {
