@@ -801,19 +801,22 @@ a {
 
 .projects .container .card .box .btns a.tracker:hover span,
 .projects .container .card .box .btns a.creativeShot:hover span,
-.projects .container .card .box .btns a.bedifferent:hover span {
+.projects .container .card .box .btns a.bedifferent:hover span,
+.projects .container .card .box .btns a.product-page:hover span {
   display: none;
 }
 
 .projects .container .card .box .btns a.tracker:hover::before,
 .projects .container .card .box .btns a.creativeShot:hover::before,
-.projects .container .card .box .btns a.bedifferent:hover::before {
+.projects .container .card .box .btns a.bedifferent:hover::before,
+.projects .container .card .box .btns a.product-page:hover::before {
   content: "Not availabale !";
 }
 
 .projects .container .card .box .btns a.tracker:hover,
 .projects .container .card .box .btns a.creativeShot:hover,
-.projects .container .card .box .btns a.bedifferent:hover {
+.projects .container .card .box .btns a.bedifferent:hover,
+.projects .container .card .box .btns a.product-page:hover {
   background-color: var(--hoverColor) !important;
   color: #fff !important;
   border: 2px solid var(--hoverColor) !important;
