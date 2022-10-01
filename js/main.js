@@ -26,22 +26,14 @@ $(document).ready(function () {
 
   // typing animation
   var typed = new Typed(".typing-2", {
-    strings: [
-      "Web Developer.",
-      "JavaScript Developer.",
-      "Freelancer.",
-    ],
+    strings: ["Web Developer.", "JavaScript Developer.", "Freelancer."],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
   });
 
   var typed = new Typed(".typing", {
-    strings: [
-      "Web Developer.",
-      "JavaScript Developer.",
-      "Freelancer.",
-    ],
+    strings: ["Web Developer.", "JavaScript Developer."],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,

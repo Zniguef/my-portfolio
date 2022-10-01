@@ -652,6 +652,9 @@ a {
   width: 65%;
 }
 
+.skills-content .tailwind::before {
+  width: 50%;
+}
 /** --------------------------- **/
 
 .skills-content .up .js::before {
@@ -681,22 +684,6 @@ a {
 .skills-content .up .nest::before {
   width: 70%;
 }
-
-/** --------------------------- **/
-
-.skills-content .bottom .py::before {
-  width: 60%;
-}
-
-.skills-content .bottom .flask::before {
-  width: 55%;
-}
-
-.skills-content .bottom .fastapi::before {
-  width: 45%;
-}
-
-/** --------------------------- **/
 
 /** End Skills **/
 
@@ -775,9 +762,6 @@ a {
   padding: 10px 20px;
   border-radius: 50px;
   color: #fff;
-  /* border: 2px solid var(--mainColor); */
-  /* border-width: 2px; */
-  /* border-style: solid; */
   background-image: linear-gradient(
     110.78deg,
     rgb(118, 230, 80) -1.13%,
@@ -787,9 +771,6 @@ a {
     rgb(255, 24, 189) 67.94%,
     rgb(26, 75, 255) 85.34%
   ) !important;
-  /* background-clip: text; */
-  /* -webkit-background-clip: text; */
-  /* color: transparent; */
 }
 
 .projects .carousel .card .box .btns a:hover {
@@ -841,7 +822,6 @@ a {
     rgb(255, 24, 189) 67.94%,
     rgb(26, 75, 255) 85.34%
   ) !important;
-  /* background-color: var(--mainColor) !important; */
   cursor: pointer;
   margin: 0 5px;
   transition: var(--transition);
@@ -1318,9 +1298,10 @@ a {
 
   .navbar .menu {
     position: fixed;
-    background-color: #444444fc;
+    background-color: #0a0909;
     opacity: 90%;
     width: 100%;
+    height: 100vh;
     z-index: 1;
     left: -100%;
     top: 0;
@@ -1567,6 +1548,12 @@ a {
 
   .thank-content .text {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 360px) {
+  .section1 .section1-content .intro3 {
+    margin-bottom: 40px;
   }
 }
 
